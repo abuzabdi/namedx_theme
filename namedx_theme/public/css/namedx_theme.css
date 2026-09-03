@@ -1,0 +1,181 @@
+/* =========================================================
+   NAMEDX — Tema oscuro para Frappe / ERPNext
+   Paleta basada en el logo: azul marino, dorado y verde
+   ========================================================= */
+
+:root {
+    /* --- Paleta base --- */
+    --namedx-navy:        #16213e;   /* azul marino profundo (fondo principal) */
+    --namedx-navy-light:  #1f2d52;   /* azul marino un poco más claro (paneles) */
+    --namedx-navy-lighter:#2a3b66;   /* bordes / hover sutil */
+    --namedx-gold:        #c9a227;   /* dorado del logo (acento primario) */
+    --namedx-gold-hover:  #e0b830;
+    --namedx-green:       #4a9d6e;   /* verde del logo (acento secundario / éxito) */
+    --namedx-green-hover: #5cb880;
+    --namedx-text:        #e8eaf0;   /* texto principal sobre fondo oscuro */
+    --namedx-text-muted:  #a7adc4;   /* texto secundario */
+
+    /* --- Overrides de variables internas de Frappe (Desk) --- */
+    --primary: var(--namedx-gold);
+    --primary-color: var(--namedx-gold);
+    --bg-color: var(--namedx-navy);
+    --fg-color: var(--namedx-navy-light);
+    --text-color: var(--namedx-text);
+    --text-muted: var(--namedx-text-muted);
+    --card-bg: var(--namedx-navy-light);
+    --border-color: var(--namedx-navy-lighter);
+    --navbar-bg: var(--namedx-navy);
+    --sidebar-bg: var(--namedx-navy);
+}
+
+/* --- Fondo general del Desk --- */
+body.desk-app {
+    background-color: var(--namedx-navy) !important;
+    color: var(--namedx-text) !important;
+}
+
+/* --- Barra de navegación superior --- */
+.navbar,
+.navbar-default {
+    background-color: var(--namedx-navy) !important;
+    border-bottom: 1px solid var(--namedx-navy-lighter) !important;
+}
+
+/* --- Sidebar / menú lateral --- */
+.desk-sidebar,
+.standard-sidebar {
+    background-color: var(--namedx-navy) !important;
+    border-right: 1px solid var(--namedx-navy-lighter) !important;
+}
+
+.desk-sidebar .sidebar-item.selected,
+.desk-sidebar .sidebar-item:hover {
+    background-color: var(--namedx-navy-light) !important;
+    border-left: 3px solid var(--namedx-gold);
+}
+
+/* --- Tarjetas / paneles / widgets --- */
+.widget,
+.frappe-card,
+.form-page,
+.page-card {
+    background-color: var(--namedx-navy-light) !important;
+    border: 1px solid var(--namedx-navy-lighter) !important;
+    color: var(--namedx-text) !important;
+}
+
+/* --- Botones primarios (dorado) --- */
+.btn-primary {
+    background-color: var(--namedx-gold) !important;
+    border-color: var(--namedx-gold) !important;
+    color: var(--namedx-navy) !important;
+    font-weight: 600;
+}
+.btn-primary:hover {
+    background-color: var(--namedx-gold-hover) !important;
+    border-color: var(--namedx-gold-hover) !important;
+}
+
+/* --- Botones por defecto / secundarios / outline (cubre login y demás vistas) --- */
+.btn-default,
+.btn-secondary,
+.btn-outline-secondary,
+.btn-outline-primary,
+.btn.btn-default,
+a.btn,
+button.btn:not(.btn-primary):not(.btn-success):not(.btn-danger) {
+    background-color: var(--namedx-navy-lighter) !important;
+    border-color: var(--namedx-navy-lighter) !important;
+    color: var(--namedx-text) !important;
+}
+.btn-default:hover,
+.btn-secondary:hover,
+.btn-outline-secondary:hover,
+button.btn:not(.btn-primary):not(.btn-success):not(.btn-danger):hover {
+    background-color: #34477a !important;
+    color: #ffffff !important;
+}
+
+/* --- Botones deshabilitados (cubre disabled, .disabled, pointer-events:none, aria-disabled) --- */
+.btn:disabled,
+.btn.disabled,
+.btn[disabled],
+.btn[aria-disabled="true"],
+button:disabled {
+    background-color: var(--namedx-navy-lighter) !important;
+    border-color: var(--namedx-navy-lighter) !important;
+    color: var(--namedx-text-muted) !important;
+    opacity: 1 !important;
+}
+
+/* --- Login: fondo amarillo de autocompletado del navegador --- */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+    -webkit-text-fill-color: var(--namedx-text) !important;
+    -webkit-box-shadow: 0 0 0px 1000px var(--namedx-navy-light) inset !important;
+    box-shadow: 0 0 0px 1000px var(--namedx-navy-light) inset !important;
+    transition: background-color 9999s ease-in-out 0s;
+}
+
+/* --- Botones secundarios / éxito (verde) --- */
+.btn-success,
+.indicator.green {
+    background-color: var(--namedx-green) !important;
+    border-color: var(--namedx-green) !important;
+}
+.btn-success:hover {
+    background-color: var(--namedx-green-hover) !important;
+}
+
+/* --- Enlaces --- */
+a {
+    color: var(--namedx-gold);
+}
+a:hover {
+    color: var(--namedx-gold-hover);
+}
+
+/* --- Inputs y formularios --- */
+.form-control,
+.input-with-feedback {
+    background-color: var(--namedx-navy-light) !important;
+    border: 1px solid var(--namedx-navy-lighter) !important;
+    color: var(--namedx-text) !important;
+}
+.form-control:focus {
+    border-color: var(--namedx-gold) !important;
+    box-shadow: 0 0 0 2px rgba(201, 162, 39, 0.25) !important;
+}
+
+/* --- Tablas / listas --- */
+.list-row,
+.list-row-container {
+    border-bottom: 1px solid var(--namedx-navy-lighter) !important;
+}
+.list-row:hover {
+    background-color: var(--namedx-navy-light) !important;
+}
+
+/* --- Indicadores de estado (badges) --- */
+.indicator-pill.gray  { background-color: var(--namedx-navy-lighter) !important; color: var(--namedx-text) !important; }
+.indicator-pill.blue  { background-color: #2d6cdf !important; }
+.indicator-pill.green { background-color: var(--namedx-green) !important; }
+.indicator-pill.orange,
+.indicator-pill.yellow { background-color: var(--namedx-gold) !important; color: var(--namedx-navy) !important; }
+
+/* --- Scrollbar oscuro --- */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--namedx-navy);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--namedx-navy-lighter);
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--namedx-gold);
+}

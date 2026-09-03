@@ -5,6 +5,12 @@ app_description = "NewTheme"
 app_email = "info@napnux.com"
 app_license = "mit"
 
+app_include_css = "/assets/namedx_theme/css/namedx_theme.css"
+web_include_css = "/assets/namedx_theme/css/namedx_theme.css"
+
+app_logo_url = "/assets/namedx_theme/images/namedx_logo.png"
+
+
 # Apps
 # ------------------
 
